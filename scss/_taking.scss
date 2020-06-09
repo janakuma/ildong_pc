@@ -1,0 +1,143 @@
+﻿@charset "UTF-8";
+
+$img_taking: '../images/taking';
+#taking {
+    .page-visual {
+		background-image: url(#{$img_taking}/visual.jpg);
+    }
+
+    .notice-block {
+        position: relative;
+        padding: 105px 0 100px 0;
+        text-align: center;
+        background-color: #691acf;
+        .notice {
+            box-sizing: border-box;
+            width: 844px;
+            margin: 42px auto 0 auto;
+            padding: 64px 0;
+            border: 1px solid #fff;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60px;
+            height: 60px;
+            border: 7px solid #691acf;
+            border-radius: 50%;
+            background: #fff url(#{$img_taking}/ico-exclamation.png) no-repeat center center;
+        }
+    }
+
+    .tab-cnt.type1 {
+        text-align: center;
+
+        .block:nth-of-type(1) {
+            padding: 74px 0 86px 0;
+            figure { margin-top: 80px; }
+            p { margin-top: 50px; }
+        }
+
+        .block:nth-of-type(2) {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+            p { margin-top: 50px; }
+        }
+
+        .block:nth-of-type(3) {
+            padding: 80px 0 140px 0;
+            p { margin-top: 45px; }
+        }
+    }
+
+    .tab-cnt.type2 {
+        .block {
+            .inner {
+                box-sizing: border-box;
+                position: relative;
+                width: 1100px;
+                padding: 0 0 0 515px;
+                margin: 0 auto;
+
+                h4 {
+                    position: absolute;
+                    top: 0;
+                    left: 145px;
+                }
+            }
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        ul + .label {
+            margin-top: 90px;
+        }
+
+        ul {
+            li {
+                font-size: 0;
+                img {
+                    padding-left: 32px;
+                    background: url(../images/common/bullet-arrow.png) no-repeat 0 0;
+                }
+            }
+            li ~ li {
+                margin-top: 22px;
+            }
+        }
+
+        .block:nth-of-type(1) {
+            padding: 110px 0;
+            background-color: #f4f4f4;
+        }
+
+        .block:nth-of-type(2) {
+            padding: 100px 0;
+        }
+
+        .block:nth-of-type(3) {
+            padding: 120px 0 230px 0;
+            background-color: #f4f4f4;
+        }
+    }
+
+    .tab-cnt.type3 {
+        .block:nth-of-type(1) {
+            display: flex;
+            .box {
+                display: flex;
+                flex: 1;
+                padding: 165px 0 200px 0;
+                font-size: 0;
+
+                figure,
+                p {
+                    width: 840px;
+                    text-align: center;
+                }
+
+                p {
+                    margin: 30px 0 0 0;
+                }
+
+                &:first-child {
+                    justify-content: flex-end;
+                    background-color: #f9f7ff;
+                }
+
+                &:last-child {
+                    background-color: #f3efff;
+                }
+
+            }
+        }
+    }
+}

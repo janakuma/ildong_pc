@@ -1,0 +1,150 @@
+﻿@charset "UTF-8";
+
+$img_curious: '../images/curious';
+/* FAQ 수정 1020*/
+#curious {
+	.page-visual {
+		background-image: url(#{$img_curious}/visual.jpg);
+	}
+
+	h3 {
+		margin: 92px 0 0 0;
+		text-align: center;
+		font-size: 0;
+	}
+
+	.faq-list {
+		width: 1067px;
+		margin: 86px auto 0 auto;
+
+		ul {
+			border-top: 1px solid #e1e1e1;
+			li {
+				padding: 0 15px 0;
+				border-bottom: 1px solid #e1e1e1;
+				color: #686868;
+				letter-spacing: -1px;
+
+				.block-q {
+					position: relative;
+					p {
+						position: relative;
+						padding: 34px 30px;
+						font-size: 20px;
+						font-weight: 400;
+						background: url(#{$img_curious}/ico-q.png) no-repeat 0px 37px;
+						cursor: pointer;
+					}
+
+					.status {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: absolute;
+						top: 50%;
+						right: 0px;
+						transform: translate(0,-50%);
+						width: 28px;
+						height: 28px;
+						cursor: pointer;
+
+						&::before,
+						&::after {
+							content: '';
+							display: block;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							width: 100%;
+							height: 2px;
+							background-color: #a3a3a3;
+							transform: translate(-50%, 50%);
+						}
+
+						&::after {
+							transform: rotate(90deg) translate(50%, 50%);
+							top: 0;
+							left: 0;
+							background-color: rgba(0,0,0,0);
+						}
+					}
+				}
+				.block-a {
+					display: none;
+					margin: 0 0 34px 0;
+					padding: 36px 64px;
+					font-size: 18px;
+					line-height: 1.4;
+					background: url(#{$img_curious}/ico-a.png) no-repeat 37px 40px;
+					background-color: #f4f4f4;
+
+					p {
+						position: relative;
+						font-weight: 300;
+
+						strong {
+							font-weight: 400;
+						}
+					}
+
+					a {
+						display: inline-flex;
+						align-items: center;
+						margin-top: 30px;
+						color: #6919cf;
+						border-bottom: 1px solid #6919cf;
+
+						&:after {
+							content: '';
+							display: inline-block;
+							width: 12px;
+							height: 13px;
+							margin-left: 6px;
+							background: url(#{$img_curious}/double_arrow.png) no-repeat 0 0;
+						}
+					}
+				}
+			}
+
+			li.selected {
+				.block-q {
+					p { color: #6919cf; }
+					.status::before,
+					.status::after {
+						background-color: #6b1cd0;
+					}
+				}
+
+				.block-a {
+					display: block;
+
+				}
+			}
+		}
+	}
+
+	.btn-group {
+		margin: 50px 0 0 0;
+		text-align: center;
+
+		a {
+			overflow: hidden;
+			display: inline-block;
+			width: 377px;
+			height: 74px;
+			text-indent: -1000px;;
+			background: url(#{$img_curious}/btn-question.png) no-repeat 0 0;
+
+			&:hover {
+				background-position: 0 bottom;
+			}
+		}
+	}
+
+	.msg {
+		margin: 18px 0 85px 0;
+		text-align: center;
+		font-size: 0;
+	}
+}
+/* //FAQ 수정 1020 */

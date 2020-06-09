@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="No-Cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=750, target-densitydpi=device-dpi, user-scalable=0" />
+
+    <title>ILDONG</title>
+    <link rel="stylesheet" type="text/css" href="css/daon.css" />
+    <link rel="stylesheet" type="text/css" href="library/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="library/swiper/swiper.min.css" />
+
+    <script type="text/javascript" src="js/vendors.js"></script>
+    <script type="text/javascript" src="js/decube.common.js"></script>
+</head>
+<body>
+    <!--
+        ID value: home, fact, taking, curious, pharmacy
+    -->
+
+    <div id="home" class="wrapper">
+
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="images/common/logo.png" alt="다온.바라온">
+                    </a>
+                </h1>
+
+                <div class="gnb">
+                    <div class="dep-group">
+                        <a href="fact.html?tab=0" class="dep1">팩트체크</a>
+
+                        <div class="dep2">
+                            <a href="fact.html?tab=0">피임약 팩트체크</a>
+                            <a href="fact.html?tab=1">피임약 이야기</a>
+                            <a href="fact.html?tab=2">피임약 부작용</a>
+                        </div>
+                    </div>
+
+                    <div class="dep-group">
+                        <a href="taking.html?tab=0" class="dep1">복용안내</a>
+
+                        <div class="dep2">
+                            <a href="taking.html?tab=0">처음 복용하는경우</a>
+                            <a href="taking.html?tab=1">복용을 잊었을 경우</a>
+                            <a href="taking.html?tab=2">약을 변경할 경우</a>
+                        </div>
+                    </div>
+
+                    <div class="dep-group">
+                        <a href="curious.html" class="dep1">궁금해요</a>
+                    </div>
+
+                    <div class="dep-group">
+                        <a href="https://www.ildong.com/kor/pharm/list.id" class="dep1">약국찾기</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="home-slider">
+            <!-- Slider -->
+            <div class="swiper-container">
+                <div class="slider swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="content">
+                            <button class="btn-play" onclick="fnPopShow('.pop-movie');">
+                                <img src="images/main/btn-play.png" alt="play">
+                            </button>
+
+                            <a href="competition.html" class="event-banner">
+                                <img src="images/main/event-banner.png" alt="다마래 다온 이벤트">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide2">
+                        <div class="content">
+                            <div class="txt-motion type2">
+                                <p>
+                                    <img src="images/main/home2-txt1.png" alt="나를 가장 잘 아는 피임약">
+                                </p>
+                                <p>
+                                    <img src="images/main/home2-txt2.png" alt="우리가 자신있게 말할 수 있는 이유가 무엇인지 보시겠어요?">
+                                </p>
+                                <p>
+                                    <button onclick="fnPopShow('.pop-daon-story');">
+                                        <img src="images/main/home2-txt3.png" alt="다온과 바라온 이야기">
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide3">
+                        <div class="content">
+                            <div class="txt-motion type3">
+                                <p>
+                                    <img src="images/main/home3-txt1.png" alt="눈치 없는 신춘문예 공모전 - 다마래 다온">
+                                </p>
+                                <p>
+                                    <img src="images/main/home3-txt2.png" alt="눈치 보지 말고 있는거 다 말해 단, 20자 이내로만!">
+                                </p>
+                                <p>
+                                    <img src="images/main/home3-txt3.png" alt="매월 공모전에 선정된 분들에게는 경품과 시집등단의 기회가 주어집니다.">
+                                </p>
+                                <p>
+                                    <a href="competition.html">
+                                        <img src="images/main/home3-txt4.png" alt="작성하러가기 ">
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- //Slider -->
+
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+
+            <div class="progress-bar">
+                <span class="thumb"></span>
+            </div>
+        </div>
+
+        <nav class="tab-box">
+            <a href="" class="selected">
+                <img src="images/main/tab-01.png" alt="다온 이야기">
+            </a>
+            <a href="">
+                <img src="images/main/tab-02.png" alt="바라온 이야기">
+            </a>
+        </nav>
+
+        <!-- 다온 이야기 -->
+        <div class="tab-cnt type1 selected">
+
+            <img src="images/main/deco1-1.png" alt="" class="deco" data-speed="0.3" data-parallax>
+            <img src="images/main/deco1-2.png" alt="" class="deco" data-speed="0.2" data-parallax>
+            <img src="images/main/deco1-3.png" alt="" class="deco" data-speed="0.1" data-parallax>
+
+            <div class="cnt-0" data-aos="fade-up">
+                <div class="inner-block">
+                    <p class="block">
+                        <img src="images/main/tabCnt01-txt1.png" alt="다온만의 스타일">
+                    </p>
+                    <img src="images/main/tabCnt01-img11.png" alt="" class="obj"  data-speed="0.15" data-parallax>
+                </div>
+            </div>
+
+            <div class="cnt-1" data-aos="fade-up">
+                <div class="inner-block">
+                    <p class="block">
+                        <img src="images/main/tabCnt01-txt2.png" alt="일주일에는 딱 일주일치만">
+                    </p>
+
+                    <img src="images/main/tabCnt01-img21.jpg" alt="" class="obj" data-speed="0.05" data-parallax>
+                    <img src="images/main/tabCnt01-img22.png" alt="" class="obj" data-speed="0.2" data-parallax>
+                </div>
+            </div>
+
+            <div class="cnt-2" data-aos="fade-up">
+                <div class="inner-block">
+                    <p class="block">
+                        <img src="images/main/tabCnt01-txt31.png" alt="">
+                    </p>
+
+                    <p class="block">
+                        <img src="images/main/tabCnt01-txt32.png" alt="">
+                    </p>
+
+                    <img src="images/main/tabCnt01-img31.jpg" alt="" class="obj" data-speed="0.05" data-parallax>
+                    <img src="images/main/tabCnt01-img32.png" alt="" class="obj" data-speed="0.1" data-parallax>
+                </div>
+            </div>
+        </div>
+
+        <!-- 바라온 이야기 -->
+        <div class="tab-cnt type2 ">
+
+            <img src="images/main/deco2-1.png" alt="" class="deco" data-speed="0.05" data-parallax>
+            <img src="images/main/deco2-2.png" alt="" class="deco" data-speed="0.4" data-parallax>
+            <img src="images/main/deco2-3.png" alt="" class="deco" data-speed="0.2" data-parallax>
+
+            <div class="cnt-0" data-aos="fade-up">
+                <div class="inner-block">
+                    <p class="block">
+                        <img src="images/main/tabCnt02-txt1.png" alt="다온만의 스타일">
+                    </p>
+                    <img src="images/main/tabCnt02-img11.jpg" alt="" class="obj" data-speed="0.05" data-parallax>
+                    <img src="images/main/tabCnt02-img12.png" alt="" class="obj" data-speed="0.2" data-parallax>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="inner">
+            <ul>
+                <li>
+                    <img src="images/common/footer-info-01.png" alt="">
+                </li>
+                <li>
+                    <img src="images/common/footer-info-02.png" alt="">
+                </li>
+                <li>
+                    <img src="images/common/footer-info-03.png" alt="">
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <img src="images/common/footer-info-04.png" alt="">
+                </li>
+                <li>
+                    <img src="images/common/copyright.png" alt="">
+                </li>
+            </ul>
+
+            <a href="" class="scroll-top" onclick="posTop(); return false;">
+                <img src="images/common/scroll-top.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- POPUP: 다온과 바라온 이야기 -->
+    <div class="popup pop-daon-story" style="display: none;">
+        <button class="btn-close b-close">
+            <img src="images/popup/btn-x.png" alt="close">
+        </button>
+
+        <h4>
+            <img src="images/popup/daon-story-title.png" alt="다온과 바라온 이야기">
+        </h4>
+
+        <div class="cnt">
+            <p>
+                <img src="images/popup/daon-story-txt1.png" alt="피임약을 팔면서 피임약을 말하지 않는 광고">
+                <img src="images/popup/daon-story-txt2.png" alt="메시지는 조금씩 바뀌지만 몇 년간 하나도 변하지 않은 제품 ">
+                <img src="images/popup/daon-story-txt3.png" alt="왜 그래야만 하는지 이해할 순 있지만">
+                <img src="images/popup/daon-story-txt4.png" alt="애써 예쁜 척, 좋은 척하는 것은 이젠 바뀌어야 한다고 생각합니다">
+                <img src="images/popup/daon-story-txt5.png" alt="피임은 셀프고 피임은 선택이고 피임은 일상이라는 생각">
+            </p>
+
+            <p>
+                <img src="images/popup/daon-story-txt6.png" alt="피임은 가장 우릴 우리답게 만드는 선택이라는 믿음">
+                <img src="images/popup/daon-story-txt7.png" alt="그래서 다온은 누구나 할 수 있지만 누구도 하지 않았던 변화를 시작합니다">
+                <img src="images/popup/daon-story-txt8.png" alt="그래서 자신 있게 말할 수 있어요">
+                <img src="images/popup/daon-story-txt9.png" alt="우리가 원하던 사전경구피임약 우리 다운, 다온">
+            </p>
+        </div>
+    </div>
+
+    <div class="popup pop-movie" style="display: none;">
+        <button class="btn-close b-close">
+            <img src="images/popup/btn-x.png" alt="close">
+        </button>
+
+        <div class="cnt">
+
+        </div>
+    </div>
+
+    <!-- https://github.com/michalsnik/aos -->
+    <script src="library/aos/aos.js"></script>
+    <script src="library/pagejs/page.js"></script>
+    <script src="library/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+</body>
+</html>

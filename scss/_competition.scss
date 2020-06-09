@@ -1,0 +1,342 @@
+﻿@charset "UTF-8";
+
+$img_competition: '../images/competition/';
+
+#competition {
+
+	.swiper-slide {
+		width: 480px !important;
+	}
+
+	.swiper-pagination {
+		width: 100%;
+		margin-top: 25px;
+		text-align: center;
+
+		.swiper-pagination-bullet {
+			opacity: 0.6;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			margin: 0 10px;
+			border: 2px solid #000;
+			background-color: rgba(0,0,0,0);
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: #000;
+			opacity: 1;
+		}
+	}
+
+	.competition-header {
+		box-sizing: border-box;
+		height: 1160px;
+		background: url(#{$img_competition}/visual.jpg) no-repeat center 0;
+
+		h2 {
+			padding: 258px 0 64px 0;
+			text-align: center;
+		}
+
+		.swiper-wrap {
+			display: block;
+			position: relative;
+			width: 982px;
+			margin: 0 auto;
+		}
+
+		.swiper-slide {
+			.img {
+				display: block;
+				transition: all 0.32s;
+				transform: scale(0.85);
+				background-color: #000;
+
+				img {
+					transition: all 0.32s;
+					opacity: 0.5;
+				}
+			}
+		}
+
+		.swiper-slide-active {
+			position: relative;
+			z-index: 10;
+			.img {
+				transform: scale(1);
+				img {
+					opacity: 1;
+				}
+			}
+		}
+
+
+	}
+
+	.competition-story {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		padding: 0 0 134px 0;
+
+		.title {
+			margin: 130px 0 90px 0;
+		}
+
+		.btn-group {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn-application {
+			display: inline-block;
+			width: 377px;
+			height: 74px;
+			background: url() no-repeat 0 0;
+			overflow: hidden;
+			text-indent: -1000px;
+
+			&:nth-of-type(1) {
+				background-image: url(#{$img_competition}/btn-entry.png);
+			}
+
+			&:nth-of-type(2) {
+				background-image: url(#{$img_competition}/btn-myView.png);
+			}
+
+			&:hover {
+				background-position: 0 bottom;
+
+			}
+		}
+
+		.btn-application ~ .btn-application {
+			margin: 0 0 0 17px;
+		}
+
+		.btn-notice {
+			opacity: 0.6;
+			margin-top: 42px;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.my-slider {
+			display: none;
+			position: relative;
+			width: 982px;
+			margin: 150px auto 0 auto;
+		}
+
+		.obj-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 1569px;
+			background: url(#{$img_competition}/competition-story-bg.jpg) no-repeat center 0;
+		}
+	}
+
+	.competition-story.expended {
+		padding-bottom: 108px;
+		.my-slider {
+			display: block;
+		}
+	}
+
+	.competition-participating {
+		overflow: hidden;
+		padding: 85px 0;
+		background-color: #f5f5f5;
+		h3 {
+			text-align: center;
+		}
+		.sort {
+			display: flex;
+			justify-content: center;
+			margin: 48px 0 112px 0;
+
+			button {
+				display: block;
+				overflow: hidden;
+				height: 24px;
+				padding: 0 47px 0;
+
+				&:hover,
+				&.selected {
+					img {
+						margin: -43px 0 0 0;
+					}
+				}
+
+				& ~ button {
+					border-left: 1px solid #9c9c9c;
+				}
+			}
+		}
+
+		.list {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 982px;
+			margin: 0 auto;
+
+			.item-card {
+				margin: 24px 0 0 0;
+
+				&:nth-of-type(-n+2) {
+					margin-top: 0;
+				}
+
+			}
+		}
+
+		.btn-group {
+			margin-top: 50px;
+			text-align: center;
+			button {
+				opacity: 0.6;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.item-card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 480px;
+	height: 480px;
+	background: #000 url() no-repeat center center;
+	background-size: cover;
+
+	@for $i from 0 to 5 {
+		&.random-bg#{$i} {
+			background: url(#{$img_competition}/random-bg#{$i}.jpg) no-repeat 0 0;
+			background-size: cover;
+		}
+	}
+
+	&.no-result {
+		background-color: #a8a6bd;
+		p.text {
+			margin: 0;
+			font-family: 'Noto Sans KR', sans-serif;
+			font-size: 20px;
+			font-weight: 300;
+
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		position: relative;
+
+		.text {
+			position: relative;
+			opacity: 0.8;
+			margin-top: -60px;
+			padding: 44px 0;
+			line-height: 1.6;
+			text-align: center;
+			font-size: 26px;
+			color: #fff;
+			font-family: 'Noto Serif KR', serif;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				width: 11px;
+				height: 9px;
+				background: url(#{$img_competition}/double-quotes.png) no-repeat 0 0;
+			}
+
+			&::before { top: 0; }
+			&::after { bottom: 0; transform: rotate(180deg);}
+		}
+
+		.intro {
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+
+			strong {
+				display: block;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 4px;
+			}
+		}
+	}
+
+	.item-info-box {
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 45px;
+		padding: 0 5px 0 16px;
+		border-top: 1px solid #5a5a5c;
+
+		button {
+			display: flex;
+			align-items: center;
+			color: #fff;
+			font-size: 20px;
+		}
+
+		.btn-like {
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 23px;
+				height: 20px;
+				margin: 0 10px 0 0;
+				background: url(#{$img_competition}/ico-heart.png) no-repeat 0 0;
+				background-size: contain;
+			}
+		}
+
+		.btn-share {
+			width: 45px;
+			height: 44px;
+			background: url(#{$img_competition}/ico-share.png) no-repeat 0 0;
+			background-size: contain;
+		}
+	}
+
+	.btn-del {
+		overflow: hidden;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 46px;
+		height: 45px;
+		text-indent: -1000px;
+		background: url(../images/popup/btn-x-light.png) no-repeat 0 0;
+	}
+}

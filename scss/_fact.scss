@@ -1,0 +1,204 @@
+﻿@charset "UTF-8";
+
+$img_fact: '../images/fact/';
+#fact {
+    .page-visual {
+		background-image: url(#{$img_fact}/visual.jpg);
+    }
+
+    .tab-cnt.type1 {
+        padding: 65px 0 146px 0;
+
+        dl {
+            position: relative;
+            width: 950px;
+            margin: 0 auto;
+            padding: 0 270px 0 0;
+            dd {
+                margin-top: 20px;
+                padding: 52px 0 52px 64px;
+                font-size: 0;
+                background-color: #f4f4f4;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                background: url() no-repeat 0 0;
+            }
+        }
+
+        dl:nth-of-type(1):after {
+            top: 75px;
+            right: 0;
+            width: 203px;
+            height: 166px;
+            background-image: url(#{$img_fact}/fact1-obj1.png);
+        }
+
+        dl:nth-of-type(2):after {
+            top: 65px;
+            right: 10px;
+            width: 211px;
+            height: 162px;
+            background-image: url(#{$img_fact}/fact1-obj2.png);
+        }
+
+        dl:nth-of-type(3):after {
+            top: 30px;
+            right: 0;
+            width: 160px;
+            height: 187px;
+            background-image: url(#{$img_fact}/fact1-obj3.png);
+        }
+
+        dl ~ dl {
+            margin-top: 115px;
+        }
+    }
+
+    .tab-cnt.type2 {
+        font-size: 0;
+        text-align: center;
+
+        .desc {
+            padding: 85px 0 45px 0;
+        }
+
+        .mean {
+            padding: 48px 0;
+            background-color: #f4f4f4;
+        }
+
+        .action {
+            padding: 148px 0 56px 0;
+
+            figure {
+                margin: 108px 0 0 0;
+            }
+            p {
+                margin: 40px 0 0 0;
+            }
+        }
+
+        .effect {
+            padding: 70px 0;
+            background-color: #f3efff;
+
+            dl {
+                display: flex;
+                width: 1116px;
+                margin: 0 auto;
+
+                dt {
+                    margin-right: 20px;
+                }
+
+                dd {
+                    padding: 10px 0 0 0;
+                    font-size: 0;
+                    p {
+                        text-align: left;
+
+                        img {
+                            padding-left: 32px;
+                            background: url(../images/common/bullet-arrow.png) no-repeat 0 0;
+                        }
+                    }
+
+                    p ~ p {
+                        margin-top: 18px;
+                    }
+                }
+            }
+
+            dl ~ dl {
+                margin-top: 44px;
+            }
+        }
+
+        .success {
+            padding: 160px 0 124px 0;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 1000px;
+                margin: 0 auto;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end ;
+                    width: 33.33%;
+                    height: 280px;
+                    margin-top: 75px;
+
+                }
+            }
+
+        }
+
+    }
+
+    .tab-cnt.type3 {
+
+        .block {
+            padding: 85px 0;
+
+            h4 {
+                text-align: center;
+            }
+
+            &:nth-child(even) {
+                background-color: #f3efff;
+            }
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            width: 1104px;
+            margin: 64px auto;
+            padding: 25px 0;
+            border: 1px solid #dcdcdc;
+            background-color: #fff;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 400px;
+                height: 310px;
+                border-right: 1px solid #ccc;
+                background: url() no-repeat 50% 50%;
+            }
+
+            ul {
+                flex: 1;
+                padding: 0 0 0 96px;
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    strong {
+                        margin-right: 40px;
+                    }
+
+                    &~li {
+                        margin-top: 68px;
+                    }
+                }
+            }
+        }
+
+        @for $obj_idx from 1 to 5 {
+            .block:nth-of-type(#{$obj_idx}) .box {
+                &:before {
+                    background-image: url(#{$img_fact}/fact3-obj#{$obj_idx}.png);
+                }
+            }
+        }
+    }
+}
